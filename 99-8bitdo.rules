@@ -1,0 +1,8 @@
+# 8BitDo controllers + bootloaders — grant the active user raw access (for Wine/flashing)
+# Runtime (8BitDo VID) and DInput mode
+SUBSYSTEM=="usb",    ATTRS{idVendor}=="2dc8", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="2dc8", MODE="0660", TAG+="uaccess"
+# 8BitDo JieLi/STM bootloader modes (2dc8:320x)
+# STMicro bootloader VID used by the modkit's boot mode
+SUBSYSTEM=="usb",    ATTRS{idVendor}=="0483", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0483", MODE="0660", TAG+="uaccess"
