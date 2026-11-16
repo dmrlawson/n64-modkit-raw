@@ -11,8 +11,10 @@ What the patched firmware does differently:
 - **L + R + Start recentres the stick**, as on an original controller.
 - **Switch (S) mode reports every 5 ms** over Bluetooth instead of every 15 ms.
 - **Switch-mode Bluetooth name is "N64 Controller Raw"**, so an adapter can tell that the
-  stick values need no further scaling. A modified BlueRetro (branch `n64-modkit-raw`)
-  uses this to pass them straight to an N64.
+  stick values need no further scaling. A
+  [modified BlueRetro](https://github.com/dmrlawson/BlueRetro/tree/n64-modkit-raw) uses
+  this to pass them straight to an N64; ready-built N64 images are on its
+  [releases page](https://github.com/dmrlawson/BlueRetro/releases).
 
 Rumble and everything else are as in the official firmware.
 
@@ -33,3 +35,8 @@ a failed flash can be repeated from bootloader mode. This is at your own risk.
 
 The patch only applies to the exact official v1.04 file: its SHA-256 is checked before
 patching and the result's SHA-256 after.
+
+## Licence
+
+The scripts and the patch are under the MIT licence (see `LICENSE`). The firmware they
+modify is 8BitDo's and is not covered by it.
